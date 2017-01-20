@@ -1,9 +1,10 @@
 # cit261
-Team repository for learning about Mobile Application Development. 
+Description of repository: Team repository for learning about Mobile Application Development. 
 
 Commits:
 
   11:17am - Created README file. Included Contact Info/Google, Code Topics and signups list.
+  
 
 Contact Info/Google:
 
@@ -14,6 +15,7 @@ Contact Info/Google:
 	Max Gerasymenko - Google Email: maxgerasymenko88@gmail.com
 
 	Ian Cunningham - Google Email: ianhewson222@gmail.com
+
 
 Code Topics
 Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays 
@@ -35,10 +37,6 @@ Using XMLHTTPRequest to Consume a JSON Web Service
 Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.)
 
 HTML5 Tags - Video, Audio, Canvas, etc.
-
-
-
-
 
 
 Signups
