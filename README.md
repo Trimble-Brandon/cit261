@@ -2,6 +2,7 @@
 Team repository for learning about Mobile Application Development. 
 
 Commits:
+
   11:17am - Created README file. Included Contact Info/Google, Code Topics and signups list.
 
 Contact Info/Google:
