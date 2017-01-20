@@ -5,6 +5,7 @@ Commits:
   11:17am - Created README file. Included Contact Info/Google, Code Topics and signups list.
 
 Contact Info/Google:
+
 	Brandon Trimble - Google Email: 13loodbanex@gmail.com
 			         
 	Eric Collett - Google Email: ericmichaelcollett@gmail.com
