@@ -17,7 +17,8 @@ Contact Info/Google:
 	Ian Cunningham - Google Email: ianhewson222@gmail.com
 
 
-Code Topics
+Code Topics:
+
 1. Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays 
 
 2. Object Creation Functions, Inheritance, Properties, Methods, Instantiation
