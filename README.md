@@ -39,7 +39,7 @@ Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin
 HTML5 Tags - Video, Audio, Canvas, etc.
 
 
-Signups
+Signups:
 
 Topic 1 -  Ian Cunningham, Eric Collett
 
