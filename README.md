@@ -18,25 +18,25 @@ Contact Info/Google:
 
 
 Code Topics
-Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays 
+1. Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays 
 
-Object Creation Functions, Inheritance, Properties, Methods, Instantiation
+2. Object Creation Functions, Inheritance, Properties, Methods, Instantiation
 
-JSON Parse, Stringify
+3. JSON Parse, Stringify
 
-Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects
+4. Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects
 
-DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.
+5. DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.
 
-Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript
+6. Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript
 
-Manipulating CSS Class Properties Using JavaScript
+7. Manipulating CSS Class Properties Using JavaScript
 
-Using XMLHTTPRequest to Consume a JSON Web Service
+8. Using XMLHTTPRequest to Consume a JSON Web Service
 
-Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.)
+9. Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.)
 
-HTML5 Tags - Video, Audio, Canvas, etc.
+10. HTML5 Tags - Video, Audio, Canvas, etc.
 
 
 Signups:
