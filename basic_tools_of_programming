@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html charset="utf-8">
+<body>
+
+<h1>Conditional</h1>
+
+<p id="demo1">Example of Conditional</p>
+
+<h1>Loop</h1>
+
+<p id="demo2"></p>
+
+<h1>Function</h1>
+
+<p id="demo3"></p>
+
+<h1>Array</h1>
+
+<p id="demo4"></p>
+
+<h1>Associative Array</h1>
+
+<p id="demo5"></p>
+
+<button type="button" onclick="programs()">Click here</button>
+
+<script type="text/javascript">
+
+  function programs() {
+
+    var output1="";
+    var output2="";
+    var output3=0;
+    var output4=0;
+    var output5=0;
+
+    // Demonstrates use of if statement
+
+    var x = 10;
+
+    if (x = 10) {
+	 output1 = "x=10";
+    } else {
+  	output1 = "x!=10";
+    }
+
+    // Outputs "Hi!" 10 times
+
+	for(var i = 0; i < 10; i++) {
+		output2 += "Hi! "
+	}
+    // Outputs the result of 2+4
+	
+    function add(number1, number2) {
+	  return number1 + number2;
+    }
+
+
+	
+    output3 = add(2,4);
+
+
+    // Displays the third value of the array evenNumbers.
+
+	var evenNumbers = [2, 4, 6];
+
+	// Index 2 corresponds with the third value
+
+	output4 = evenNumbers[2];
+
+	/*
+    Associative array that displays the number of the alphabet that corresponds with
+    the first letter of each name
+	*/
+
+	var person = { "name1":"Abba", "name2":"Betty", "name3":"Corey", "name4":"Dianne" };
+
+	// Assigns the name assigned to element with index "name1" (in other words, "Abba") to variable output5.
+	output5 = person[name1];
+	
+	document.getElementById("demo1").innerHTML = output1;
+	document.getElementById("demo2").innerHTML = output2;
+	document.getElementById("demo3").innerHTML = output3;
+	document.getElementById("demo4").innerHTML = output4;
+	document.getElementById("demo5").innerHTML = output5;
+  }
+
+</script>
+
+</body>
+</html>
