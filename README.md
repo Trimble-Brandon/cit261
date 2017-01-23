@@ -56,4 +56,4 @@ Topic 8 -  Max Gerasymenko
 
 Topic 9 - Eric Collett, 
 
-Topic 10 - Max Gerasymenko
+Topic 10 - Max Gerasymenko, Eric Collett
