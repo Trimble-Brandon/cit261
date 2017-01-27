@@ -18,28 +18,27 @@
          
          function showObjectName() {
           var hotelName = hotel.name;
-          var message = "Hotel Name is" + hotelName + ".";
+          var message = "Hotel Name is: " + hotelName + ".";
           
           document.getElementById('outputObjectName').innerHTML = message;
          }
          
          function showObjectRooms() {
           var hotelRooms = hotel.rooms;
-          var message = "Hotel room amount is" + hotelRooms + ".";
+          var message = "Hotel room amount is: " + hotelRooms + ".";
           
           document.getElementById('outputObjectRooms').innerHTML = message;
          }
          
          function showObjectBookedRooms() {
           var hotelBookedRooms = hotel.booked;
-          var message = "Hotel booked room amount is" + hotelBookedRooms + ".";
+          var message = "Hotel booked room amount is: " + hotelBookedRooms + ".";
           
           document.getElementById('outputObjectBookedRooms').innerHTML = message;
          }
          
          function showObjectAvailability() {
-          var hotelAvailability = hotel.checkAvailability;
-          var message = "Hotel room availability is" + hotelAvailability + ".";
+          var message = "Hotel room availability is: " + hotel.checkAvailability() + ".";
           
           document.getElementById('outputObjectAvailability').innerHTML = message;
          }
