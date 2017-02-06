@@ -6,7 +6,7 @@ function testLocalStorage()
         // Store
         localStorage.setItem("name", "Brandon");
         // Retrieve
-        document.getElementById("result").innerHTML = localStorage.getItem("name");
+        document.getElementById("result").innerHTML = localStorage.getItem("name") + " is my name, which is the local storage value.";
     } 
     else 
     {
