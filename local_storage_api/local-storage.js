@@ -6,7 +6,7 @@ function testLocalStorage()
         // Store
         localStorage.setItem("name", "Brandon");
         // Retrieve
-        document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+        document.getElementById("result").innerHTML = localStorage.getItem("name");
     } 
     else 
     {
