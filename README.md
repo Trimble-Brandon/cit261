@@ -42,7 +42,7 @@ Topic 1 -  Ian Cunningham, Eric Collett
 
 Topic 2 - Ian Cunningham, Brandon Trimble
 
-Topic 3 - Max Gerasymenko
+Topic 3 - Max Gerasymenko, Brandon Trimble
 
 Topic 4 - Ian Cunningham, Brandon Trimble
 
@@ -54,6 +54,6 @@ Topic 7 - Eric Collett, Max Gerasymenko
 
 Topic 8 -  Max Gerasymenko
 
-Topic 9 - Eric Collett, 
+Topic 9 - Eric Collett, Brandon Trimble
 
 Topic 10 - Max Gerasymenko, Eric Collett
