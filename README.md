@@ -48,7 +48,7 @@ Topic 4 - Ian Cunningham, Brandon Trimble
 
 Topic 5 - Eric Collett, 
 
-Topic 6 - Brandon Trimble
+Topic 6 - Brandon Trimble, Max Gerasymenko
 
 Topic 7 - Eric Collett, Max Gerasymenko
 
