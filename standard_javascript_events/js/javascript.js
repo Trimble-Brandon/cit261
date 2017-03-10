@@ -21,17 +21,3 @@ function createCircle() {
     greenCircle.setAttribute('onclick', 'animate()');
     document.getElementById('content1').appendChild(greenCircle);
 }
-
-function animate() {
-    var elem = document.getElementById('green-circle'); 
-    var pos = 0;
-    var id = setInterval(frame, 10);
-    
-        if (pos == 350) {
-            clearInterval(id);
-        } else {
-            pos++; 
-            elem.style.top = pos + 'px'; 
-            elem.style.left = pos + 'px'; 
-    }
-}
