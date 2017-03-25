@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Story</title>
+</head>
+
+<style type="text/css">
+ html{
+ 	  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzU8xRs8dI8cuHuZMqs8g_XZMXXjgkQFZoUK9rHX-33wOuhJxZSQ) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
+
+ p{
+ 	color: blue;
+ 	font-size: 30px;
+ 	font-weight: 700;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+ }
+
+ div{
+ 	color: blue;
+ 	text-align: center;
+ 	font-size: 25px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+
+ }
+
+ .center{
+ 	text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;  
+ }
+
+.myStory{
+	color: blue;
+	text-align: center;
+    font-size: 30px;
+    margin: auto;
+    width: 45%;
+}
+
+.input{
+      text-align: center;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.button
+{
+	background-color: DarkBlue; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 20%;
+    cursor: pointer;
+    margin: auto;
+    padding: 14px 40px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.button2 {
+    background-color: MediumBlue; 
+    color: black; 
+    border: 2px solid #008CBA;
+    margin-left: 40%;
+    width: 20%;
+    border: 3px solid DodgerBlue;
+    padding: 5px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.button2:hover {
+    background-color: DodgerBlue;
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#albert, #alice{
+  margin: 0 auto;
+}
+
+#div1{
+    height: 400px;
+    text-align: center;
+
+}
+
+#div3{
+    height: 400px;
+    text-align: center;
+}
+
+
+
+
+#snow{
+    background: none;
+    font-family: Androgyne;
+    background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+    height: 200%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index:4;
+    -webkit-animation: snow 5s linear infinite;
+    -moz-animation: snow 10s linear infinite;
+    -ms-animation: snow 5s linear infinite;
+    animation: snow 10s linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+</style>
+
+<script type="text/javascript">
+
+var res = "";
+
+function readFile(elementId){
+
+    var xmlhttp;
+
+    resetData();
+    setData(elementId);
+
+    if(window.XMLHttpRequest){
+        xmlhttp = new XMLHttpRequest();
+    }else{
+        smlhttp = new ActiveXobject("Microsoft.XMLHTTP");
+    }
+    
+   
+    var text = document.getElementById(elementId).getAttribute('value');
+
+    xmlhttp.onreadystatechange = function(){ 
+        if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+            var myStory = xmlhttp.responseText;
+            replace(myStory);
+           
+        }
+    }
+    
+    xmlhttp.open("GET", text,true);
+    xmlhttp.send();
+
+}
+
+
+function setData(elementId)
+{
+	document.getElementById("_noun").style.visibility = "visible";
+    document.getElementById("_verb").style.visibility = "visible";
+    document.getElementById("_adjective").style.visibility = "visible";
+    document.getElementById("_pro").style.visibility = "visible";
+    document.getElementById("_place").style.visibility = "visible";
+    
+    document.getElementById("par").style.visibility = "visible";
+    document.getElementById("par1").style.visibility = "visible";
+    document.getElementById("par2").style.visibility = "visible";
+    document.getElementById("par3").style.visibility = "visible";
+    document.getElementById("par4").style.visibility = "visible";
+    document.getElementById('result').style.background = "transparent";
+
+    if(elementId == "albert")
+    {
+    document.getElementById("div1").style.backgroundImage = "url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTCna4Ko5lgLJzX_sJKHWWLpC2uBr_uvNMXsMpwlNYHoUQqDEUF')";
+
+    document.getElementById("div3").style.backgroundImage = "url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSjZkaP5qXVQn6rRQHzCCEfjw9eAJXbr9EyF3cR7d2gi2xY-1NLQg')";
+    }
+    else if(elementId == "alice")
+    {
+        document.getElementById("div1").style.backgroundImage = "url('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT-wYQatEFLdstDhSyN5KcYhRoUhRjzz6gtCbWv4b2icDm8LiwfAw')";
+    document.getElementById("div3").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinLS5Rsl3ZimRHmXhi-ZyF97sbl1cSHKvIs2qjhRnNSiJaHa9bg')";
+    }
+}
+function replace(myStory)
+{
+ 
+	 res = myStory;
+
+
+}
+
+function ChangeColor(elementId)
+{
+
+	document.getElementById(elementId).style.background = "Navy";
+	document.getElementById(elementId).style.color = "White";
+    document.getElementById(elementId).style.width = "25%";
+
+}
+
+function changeBack(elementId)
+{
+
+	document.getElementById(elementId).style.background = "lightgrey";
+	document.getElementById(elementId).style.color = "Black";
+    document.getElementById(elementId).style.width = "25%";
+
+}
+
+function mDown(obj) {
+   	obj.style.backgroundColor = "Green";
+   
+}
+
+function mUp(obj) {
+	obj.style.backgroundColor="DarkBlue";
+
+}
+
+function display()
+{
+	var noun = document.getElementById("_noun").value.bold().sup().fontcolor("white");
+	var verb = document.getElementById("_verb").value.bold().sup().fontcolor("white");
+	var adjective = document.getElementById("_adjective").value.bold().sup().fontcolor("white");
+	var pronoun = document.getElementById("_pro").value.bold().sup().fontcolor("white");
+	var place = document.getElementById("_place").value.bold().sup().fontcolor("white"); 
+
+	var myStr = res.replace(/_noun/ig, noun)
+					.replace(/_verb/ig, verb)
+					.replace(/_adjective/ig, adjective)
+	 				.replace(/_pro/ig, pronoun)
+	 				.replace(/_place/ig, place);
+
+	document.getElementById('result').innerHTML = myStr;
+    document.getElementById('result').style.background = "LightBlue";
+	document.getElementById('result').scrollIntoView();
+
+}
+
+function resetData()
+{
+
+	document.getElementById("story").style.visibility = "hidden";
+	
+	
+	document.getElementById("_verb").value = "";
+	document.getElementById("_adjective").value = "";
+	document.getElementById("_pro").value = "";
+	document.getElementById("_place").value = "";
+    document.getElementById("_noun").value = "";
+	document.getElementById('result').innerHTML = "";
+
+	document.getElementById("_noun").style.background = "white";
+	document.getElementById("_verb").style.background = "white";
+	document.getElementById("_adjective").style.background = "white";
+	document.getElementById("_pro").style.background = "white";
+	document.getElementById("_place").style.background = "white";
+     document.getElementById('result').style.background = "transparent";
+
+}	
+
+function displayButton(){
+
+    document.getElementById("story").style.visibility = "visible";
+    document.getElementById("story").innerHTML = "Display My Story";
+}
+
+function myFunction1(elementId){
+	 elementId.style.background = "LightSkyBlue";
+}
+</script>
+
+<body id="snow">
+<iframe width="0" height="0" src="https://www.youtube.com/embed/5AnkytyIdMw?autoplay=1" 
+        frameborder="0" style="visibility: hidden;" allowfullscreen></iframe>
+<h1 class="center">Welcome to a story</h1>
+<p class="center">Choose your story : </p>
+<div onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)" id="albert" value="alber.txt" onclick="readFile(this.id)" 
+>Albert Einstein</div>
+<div id="alice" value="alice.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)">
+Alice </div>
+<hr>
+<div style="width: 100%">
+ <div style="float: left; width: 30%;" id="div1"></div>
+ <div style="float: left; width: 40%;" id="div2">
+<p id="par" style="visibility:hidden;">Noun : </p> 
+<input type="text" name="input" id="_noun" onfocus="myFunction1(this)" style="visibility:hidden;" required > 
+
+<p id="par1" style="visibility:hidden;">Verb : </p>
+ <input type="text" name="input" id="_verb" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+
+<p id="par2" style="visibility:hidden;">Place : </p> 
+<input type="text" name="input" id="_place" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+
+<p id="par3" style="visibility:hidden;">Adjective : </p>
+ <input type="text" name="input" id="_adjective" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+
+<p id="par4" style="visibility:hidden;">Pronoun : </p> 
+<input type="text" name="input" id="_pro" style="visibility:hidden;" onfocus="myFunction1(this)" oninput="displayButton()" required><br>
+</div>
+<div style="float: left; width: 30%;" id="div3"></div>
+ <br style="clear: left;" />
+
+</div>
+<br>
+<br>
+
+<button class="button button2" style="visibility:hidden;" id="story" onclick="display()"></button> 
+<br>
+<br>
+<br>
+<div class="myStory" id="result"><div>
+
+
+</body>
+</html>
