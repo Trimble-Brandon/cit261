@@ -4,7 +4,7 @@
  * separate.
  ******************************************************************************/
 html{
- 	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzU8xRs8dI8cuHuZMqs8g_XZMXXjgkQFZoUK9rHX-33wOuhJxZSQ) no-repeat center center fixed; 
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzU8xRs8dI8cuHuZMqs8g_XZMXXjgkQFZoUK9rHX-33wOuhJxZSQ) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12,22 +12,22 @@ html{
  }
 
  p{
- 	color: blue;
- 	font-size: 30px;
- 	font-weight: 700;
+    color: blue;
+    font-size: 30px;
+    font-weight: 700;
     font-family: "Comic Sans MS", cursive, sans-serif;
  }
 
 div{
- 	color: blue;
- 	text-align: center;
- 	font-size: 25px;
+    color: blue;
+    text-align: center;
+    font-size: 25px;
     font-family: "Comic Sans MS", cursive, sans-serif;
  }
 
 .myStory{
-	color: blue;
-	text-align: center;
+    color: blue;
+    text-align: center;
     font-size: 30px;
     margin: auto;
     width: 45%;

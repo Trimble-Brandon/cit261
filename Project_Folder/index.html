@@ -12,13 +12,17 @@
     <!-- End Meta Tags -->
 
     <!-- Style Sheets -->
-    <link href="/css/layout.css" type="text/css" rel="stylesheet" media="screen"/> <!-- Layout Style Sheet -->
-    <link href="/css/styling.css" type="text/css" rel="stylesheet" media="screen"/> <!-- Styling Style Sheet -->
-    <link href="/css/responsive.css" type="text/css" rel="stylesheet" media="screen"/> <!-- Media Queries Style Sheet -->
+    <link href="css/layout.css" type="text/css" rel="stylesheet" media="screen"/> <!-- Layout Style Sheet -->
+    <link href="css/styling.css" type="text/css" rel="stylesheet" media="screen"/> <!-- Styling Style Sheet -->
+    <link href="css/responsive.css" type="text/css" rel="stylesheet" media="screen"/> <!-- Media Queries Style Sheet -->
     <!-- End Style Sheets -->
+    
+    <!-- JavaScript -->
+    <script src="javascript/js.js"></script>
+    <!-- End JavaScript -->
 
     <!-- Logo -->
-    <link rel="icon" type="image/png" href="/images/mainLogo.png" />
+    <link rel="icon" type="image/png" href="images/mainLogo.png" />
 
     <title>Ad Lib Game</title>
   </head>
@@ -30,20 +34,20 @@
       <h1 class="center">Ad Lib Game</h1>
 
       <p class="center">
-        Welcome to the ad lib game, [name]! Please choose a story! <!-- TODO: Replace [name] with user's name taken from onload event. -->
+        Welcome to the ad lib game, [name]! Please choose a story! <!-- TODO: Replace [name] with user's name taken from onload event storing name in local storage. -->
       </p>
     </header>
 
     <section>
-      <div>
-        <button id="albert" value="alber.txt" onclick="readFile(this.id)" onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)">
+        <div>
+          <div id="albert" value="alber.txt" onclick="readFile(this.id)" onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)" >
             Albert Einstein
-        </button> <!-- TODO: Onclick will generate the intro and First prompt. -->
-          
-        <button id="alice" value="alice.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)">
-            Alice
-        </button>
-      </div>
+          </div>
+
+          <div id="alice" value="alice.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)">
+            Alice 
+          </div>
+        </div>
 
       <hr />
         
@@ -80,12 +84,9 @@
        <br>
        <br>
         
-       <div class="myStory" id="result"><div>
+       <div class="myStory" id="result"></div>
 
     </section>
 
-    <!-- JavaScript -->
-    <script src="/javascript/js.js"></script>
-    <!-- End JavaScript -->
   </body>
 </html>
