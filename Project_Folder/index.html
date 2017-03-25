@@ -23,21 +23,64 @@
     <title>Ad Lib Game</title>
   </head>
 
-  <body>
+  <body id="snow">
+      <iframe width="0" height="0" src="https://www.youtube.com/embed/5AnkytyIdMw?autoplay=1" 
+        frameborder="0" style="visibility: hidden;" allowfullscreen></iframe>
     <header>
-      <h1>Ad Lib Game</h1>
+      <h1 class="center">Ad Lib Game</h1>
 
-      <p>
+      <p class="center">
         Welcome to the ad lib game, [name]! Please choose a story! <!-- TODO: Replace [name] with user's name taken from onload event. -->
       </p>
     </header>
 
     <section>
       <div>
-        <button>Fenrir</button> <!-- TODO: Onclick will generate the intro and First prompt. -->
+        <button onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)" id="albert" value="alber.txt" onclick="readFile(this.id)">
+            Albert Einstein
+        </button> <!-- TODO: Onclick will generate the intro and First prompt. -->
+          
+        <button id="alice" value="alice.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)">
+            Alice
+        </button>
       </div>
 
       <hr />
+        
+      <div style="width: 100%">
+        <div style="float: left; width: 30%;" id="div1"></div>
+        <div style="float: left; width: 40%;" id="div2">
+            <p id="par" style="visibility:hidden;">Noun : </p> 
+            <input type="text" name="input" id="_noun" onfocus="myFunction1(this)" style="visibility:hidden;" required > 
+
+            <p id="par1" style="visibility:hidden;">Verb : </p>
+            <input type="text" name="input" id="_verb" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+
+            <p id="par2" style="visibility:hidden;">Place : </p> 
+            <input type="text" name="input" id="_place" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+
+            <p id="par3" style="visibility:hidden;">Adjective : </p>
+            <input type="text" name="input" id="_adjective" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+
+            <p id="par4" style="visibility:hidden;">Pronoun : </p> 
+            <input type="text" name="input" id="_pro" style="visibility:hidden;" onfocus="myFunction1(this)" oninput="displayButton()" required><br>
+        </div>
+    
+        <div style="float: left; width: 30%;" id="div3"></div>
+          
+        <br style="clear: left;" />
+
+       </div>
+        
+       <br>
+       <br>
+
+       <button class="button button2" style="visibility:hidden;" id="story" onclick="display()"></button> 
+       <br>
+       <br>
+       <br>
+        
+       <div class="myStory" id="result"><div>
 
     </section>
 
