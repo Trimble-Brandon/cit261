@@ -8,3 +8,16 @@
   font-family: "Comic Sans MS", cursive, sans-serif;  
  }
 
+#albert, #alice{
+  margin: 0 auto;
+}
+
+#div1{
+    height: 400px;
+    text-align: center;
+}
+
+#div3{
+    height: 400px;
+    text-align: center;
+}
