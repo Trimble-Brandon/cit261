@@ -84,7 +84,15 @@
        <br>
        <br>
         
-       <div class="myStory" id="result"></div> <!-- TODO: Display results is not appearing -->
+       <div>
+           <img class="pictures" src="images/fenrir1.jpg" style="width:100%;display:none;align-self:center">
+           <img class="pictures" src="images/fenrir_howl.jpg" style="width:100%;display:none">
+           <img class="pictures" src="images/fenrir_pup.jpg" style="width:100%;display:none">
+
+           <button style="visibility:hidden" id="prevPic" onclick="nextSlide(-1)">&#10094;</button>
+           <button style="visibility:hidden" id="nextPic" onclick="nextSlide(1)">&#10095;</button>
+           <div class="myStory" id="result"></div> 
+       </div>
 
     </section>
 
