@@ -3,9 +3,10 @@
  * ****************************************************************************/
 function welcomeMenu()
 {
-    var message = '<div class=\"header\"><a id=\"close\" href="#">close X</a></div>';
-    message += '<div><h2>Welcome</h2>';
-    message += 'Hello! Enter your name to get started: ';
+    var message = '<div><h2>Welcome</h2>';
+    message += 'Hello! Enter your name to get started!</div>';
+    message += '<form><p>Username: <input id="inputUser" type="text" name="username" size="15" maxlength="30" /></p>';
+    message += '<input type="submit" name="submit" value="Submit!" onclick="storeUsername(), closeWelcome()" /></form>';
 
     var elWelcome = document.createElement('div');
     elWelcome.setAttribute('id', 'welcome');
@@ -13,9 +14,29 @@ function welcomeMenu()
     document.body.appendChild(elWelcome);
 }
 
-function closeWelcome() {
-    document.body.removeChild(elWelcome);
+function storeUsername() 
+{
+    if (window.localStorage)
+    {
+        var txtUsername = document.getElementById('inputUser');
+        
+        txtUsername.value = localStorage.getItem('username');
+        
+        txtUsername.addEventListener('input', function ()
+        {
+            localStorage.setItem('username', txtUsername.value);
+        }, false);
+    }
+    else
+    {
+        window.alert('Local Storage is not supported by your browser!')
+    }
 }
+
+function closeWelcome() {
+    document.body.removeChild(elWelcome); // TODO: This might be working as you can see the box close, but the page reloads.
+}
+// TODO: Likely need a function to call the local storage variable onto the page.
 // End Username prompt menu
 
 var res = "";
