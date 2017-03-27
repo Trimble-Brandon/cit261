@@ -1,22 +1,26 @@
 /*******************************************************************************
  * Local Storage/Onload event prompt for user name
  * ****************************************************************************/
-var message = '<div class=\"header\"><a id=\"close\" href="#">close X</a></div>';
-message += '<div><h2>Welcome</h2>';
-message += 'Hello! Welcome to the Events example page! ';
-message += 'I hope you enjoy this example.</div>';
+function welcomeMenu()
+{
+    var message = '<div class=\"header\"><a id=\"close\" href="#">close X</a></div>';
+    message += '<div><h2>Welcome</h2>';
+    message += 'Hello! Enter your name to get started: ';
 
-var elWelcome = document.createElement('div');
-elWelcome.setAttribute('id', 'welcome');
-elWelcome.innerHTML = message;
-document.body.appendChild(elWelcome);
+    var elWelcome = document.createElement('div');
+    elWelcome.setAttribute('id', 'welcome');
+    elWelcome.innerHTML = message;
+    document.body.appendChild(elWelcome);
+}
 
 function closeWelcome() {
     document.body.removeChild(elWelcome);
 }
+// End Username prompt menu
 
 var res = "";
-function readFile(elementId){
+function readFile(elementId)
+{
     var xmlhttp;
     resetData();
     setData(elementId);
