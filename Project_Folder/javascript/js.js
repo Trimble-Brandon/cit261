@@ -46,9 +46,11 @@ var slideNum = 1;
 
 function readFile(elementId)
 {
-    var xmlhttp;
+   var xmlhttp;
+
     resetData();
     setData(elementId);
+
     if(window.XMLHttpRequest){
         xmlhttp = new XMLHttpRequest();
     }else{
@@ -57,10 +59,12 @@ function readFile(elementId)
     
    
     var text = document.getElementById(elementId).getAttribute('value');
+    var idName = document.getElementById(elementId).id;
+  
     xmlhttp.onreadystatechange = function(){ 
         if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
-            var myStory = xmlhttp.responseText;
-            replace(myStory);
+            var myStory = JSON.parse(xmlhttp.responseText);
+            replace(myStory, idName);
            
         }
     }
@@ -97,7 +101,18 @@ function setData(elementId)
 function replace(myStory)
 {
  
-	 res = myStory;
+	  var i = 0;
+
+   while(i < myStory.stories.length){
+  
+    	if(myStory.stories[i].storyName === idName)
+   		{
+        	res = myStory.stories[i].content;
+        	break;
+    	}
+
+        i++;   
+    }
 }
 
 function ChangeColor(elementId)
@@ -125,21 +140,26 @@ function mUp(obj) {
 
 function display()
 {
-	var noun = document.getElementById("_noun").value.bold().sup().fontcolor("white");
+var noun = document.getElementById("_noun").value.bold().sup().fontcolor("white");
 	var verb = document.getElementById("_verb").value.bold().sup().fontcolor("white");
 	var adjective = document.getElementById("_adjective").value.bold().sup().fontcolor("white");
 	var pronoun = document.getElementById("_pro").value.bold().sup().fontcolor("white");
 	var place = document.getElementById("_place").value.bold().sup().fontcolor("white"); 
-	
-        var myStr = res.replace(/_noun/ig, noun)
-                       .replace(/_verb/ig, verb)
-                       .replace(/_adjective/ig, adjective)
-                       .replace(/_pro/ig, pronoun)
-                       .replace(/_place/ig, place);
-        nextSlide(0);
-	
-	document.getElementById('result').innerHTML = myStr;
-        document.getElementById('result').style.background = "LightBlue";
+
+
+    var myObjStr = JSON.stringify(res);
+
+	var myNewStory = myObjStr.replace(/_noun/ig, noun)
+					.replace(/_verb/ig, verb)
+					.replace(/_adjective/ig, adjective)
+	 				.replace(/_pro/ig, pronoun)
+	 				.replace(/_place/ig, place)
+	 				.replace("[","")
+   	                .replace("]","")
+   	                .replace(/\"/g,"");
+
+	document.getElementById('result').innerHTML = myNewStory;
+    document.getElementById('result').style.background = "LightBlue";
 	document.getElementById('result').scrollIntoView();
 }
 
