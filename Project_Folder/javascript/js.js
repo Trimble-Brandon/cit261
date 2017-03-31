@@ -27,8 +27,10 @@ function welcomeUser()
 {
     storeUsername();
     
+    var txtUsername = localStorage.username;
+    
     var message = '<p class="center">Welcome to the ad lib game, ';
-    message += '<span>[localStorage]</span>! Please choose a story!</p>'; // TODO: Replace [localStorage] with user's name taken from local storage.
+    message += txtUsername + '! Please choose a story!</p>'; // TODO: Test the local storage call.
     
     var createWelcome = document.createElement('div');
     createWelcome.setAttribute('id', 'welcome');
