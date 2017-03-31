@@ -4,18 +4,12 @@
  * also to be kept separate.
  ******************************************************************************/
 #welcome {
-    top: 5%;
-    left: 10%;
-    padding: 15px;
-    height: 400px;
-    width: 75%;
-    background-color: grey;
-    position: absolute;
+    
 }
 
 .center{
- 	text-align: center;
-  font-family: "Comic Sans MS", cursive, sans-serif;  
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;  
  }
 
 #albert, #alice{

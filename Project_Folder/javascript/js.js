@@ -1,18 +1,6 @@
 /*******************************************************************************
  * Local Storage/Onload event prompt for user name
  * ****************************************************************************/
-function welcomeMenu()
-{
-    var message = '<div><h2>Welcome</h2>';
-    message += 'Hello! Enter your name to get started!</div>';
-    message += '<form><p>Username: <input id="inputUser" type="text" name="username" size="15" maxlength="30" /></p>';
-    message += '<input type="submit" name="submit" value="Submit!" onclick="closeWelcome()" /></form>';
-
-    var elWelcome = document.createElement('div');
-    elWelcome.setAttribute('id', 'welcome');
-    elWelcome.innerHTML = message;
-    document.body.appendChild(elWelcome);
-}
 
 function storeUsername() 
 {
@@ -22,22 +10,58 @@ function storeUsername()
         
         txtUsername.value = localStorage.getItem('username');
         
-        txtUsername.addEventListener('input', function ()
+        txtUsername.addEventListener('input', function()
         {
             localStorage.setItem('username', txtUsername.value);
         }, false);
     }
     else
     {
-        window.alert('Local Storage is not supported by your browser!')
+        window.alert('Local Storage is not supported by your browser!');
     }
+    
+    return txtUsername;
 }
 
-function closeWelcome() {
+function welcomeUser()
+{
     storeUsername();
-	
-    document.body.removeChild(elWelcome); // TODO: This might be working as you can see the box close, but the page reloads.
+    
+    var message = '<p class="center">Welcome to the ad lib game, ';
+    message += '<span>[localStorage]</span>! Please choose a story!</p>'; // TODO: Replace [localStorage] with user's name taken from local storage.
+    
+    var createWelcome = document.createElement('div');
+    createWelcome.setAttribute('id', 'welcome');
+    createWelcome.innerHTML = message;
+    document.body.appendChild(createWelcome);
+    
+    var createStories = document.createElement('div');
+    
+    var albertStory = document.createElement('div');
+    albertStory.setAttribute('id', 'albert');
+    albertStory.setAttribute('value', 'stories.txt');
+    albertStory.setAttribute('onclick', 'readFile(this.id)');
+    albertStory.setAttribute('onmouseover', 'ChangeColor(this.id)');
+    albertStory.setAttribute('onmouseleave', 'changeBack(this.id)');
+    albertStory.innerHTML = 'Albert Einstein';
+    
+    var aliceStory = document.createElement('div');
+    albertStory.setAttribute('id', 'alice');
+    albertStory.setAttribute('value', 'stories.txt');
+    albertStory.setAttribute('onclick', 'readFile(this.id)');
+    albertStory.setAttribute('onmouseover', 'ChangeColor(this.id)');
+    albertStory.setAttribute('onmouseleave', 'changeBack(this.id)');
+    albertStory.innerHTML = 'Alice';
+    
+    var fenrirStory = document.createElement('div');
+    albertStory.setAttribute('id', 'fenrir');
+    albertStory.setAttribute('value', 'stories.txt');
+    albertStory.setAttribute('onclick', 'readFile(this.id)');
+    albertStory.setAttribute('onmouseover', 'ChangeColor(this.id)');
+    albertStory.setAttribute('onmouseleave', 'changeBack(this.id)');
+    albertStory.innerHTML = 'Fenrir';
 }
+
 // TODO: Likely need a function to call the local storage variable onto the page.
 // End Username prompt menu
 

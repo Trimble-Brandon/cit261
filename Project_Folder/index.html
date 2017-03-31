@@ -27,26 +27,24 @@
     <title>Ad Lib Game</title>
   </head>
 
-  <body id="snow" onload="welcomeMenu()">
+  <body id="snow">
       <iframe width="0" height="0" src="https://www.youtube.com/embed/5AnkytyIdMw?autoplay=1" 
         frameborder="0" style="visibility: hidden;" allowfullscreen></iframe>
     <header>
       <h1 class="center">Ad Lib Game</h1>
-
-      <p class="center">
-          Welcome to the ad lib game, <span>[localStorage]</span>! Please choose a story! <!-- TODO: Replace [localStorage] with user's name taken from onload event storing name in local storage. -->
-      </p>
+      
     </header>
 
     <section>
-        <div>
-          <div id="albert" value="stories.txt" onclick="readFile(this.id)" onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)" >
-            Albert Einstein
-          </div>
-
-          <div id="alice" value="stories.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)">
-            Alice 
-          </div>
+        <div id="welcome">
+            <h2>Welcome!</h2>
+            
+            <p>Enter your name to get started!</p>
+            
+            <form>
+                <p>Username: <input id="inputUser" type="text" name="username" size="15" maxlength="30" /></p>
+                <input type="submit" name="submit" value="Submit!" onclick="welcomeUser()" />
+            </form>
         </div>
 
       <hr />
@@ -85,9 +83,9 @@
        <br>
         
        <div>
-           <img class="pictures" src="images/fenrir1.jpg" style="width:100%;display:none;">
-           <img class="pictures" src="images/fenrir_howl.jpg" style="width:100%;display:none">
-           <img class="pictures" src="images/fenrir_pup.jpg" style="width:100%;display:none">
+           <img class="pictures" src="images/fenrir1.jpg" width="50%" height="50%" style="display:none;">
+           <img class="pictures" src="images/fenrir_howl.jpg" style="display:none">
+           <img class="pictures" src="images/fenrir_pup.jpg"  width="50%" height="50%" style="display:none">
 
            <button id="prevPic" onclick="nextSlide(-1)">&#10094;</button>
            <button id="nextPic" onclick="nextSlide(1)">&#10095;</button>

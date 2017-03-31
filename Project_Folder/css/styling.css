@@ -10,6 +10,10 @@ html{
   -o-background-size: cover;
   background-size: cover;
  }
+ 
+ h1 {
+     font-size: 64px;
+ }
 
  p{
     color: blue;
@@ -23,6 +27,14 @@ div{
     text-align: center;
     font-size: 25px;
     font-family: "Comic Sans MS", cursive, sans-serif;
+ }
+ 
+ #welcome {
+     margin: 20px;
+     padding: 20px;
+     background-color: grey;
+     border-style: solid;
+     border-color: black;
  }
 
 .myStory{
@@ -40,7 +52,7 @@ div{
 
 .button
 {
-	background-color: DarkBlue; /* Green */
+    background-color: DarkBlue; /* Green */
     border: none;
     color: white;
     text-align: center;
