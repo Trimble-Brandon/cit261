@@ -63,8 +63,6 @@ function welcomeUser()
     albertStory.setAttribute('onmouseleave', 'changeBack(this.id)');
     albertStory.innerHTML = 'Fenrir';
 }
-
-// TODO: Likely need a function to call the local storage variable onto the page.
 // End Username prompt menu
 
 var res = "";
