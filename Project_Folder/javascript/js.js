@@ -32,11 +32,15 @@ function welcomeUser()
     var message = '<p class="center">Welcome to the ad lib game, ';
     message += txtUsername + '! Please choose a story!</p>'; // TODO: Test the local storage call.
     
+    window.alert(message);
+    
+    document.getElementById('welcome').style.display = "none"; 
+    
     var createWelcome = document.createElement('div');
     createWelcome.setAttribute('id', 'welcome');
     createWelcome.innerHTML = message;
     document.body.appendChild(createWelcome);
-    
+   
     var createStories = document.createElement('div');
     
     var albertStory = document.createElement('div');
@@ -46,6 +50,7 @@ function welcomeUser()
     albertStory.setAttribute('onmouseover', 'ChangeColor(this.id)');
     albertStory.setAttribute('onmouseleave', 'changeBack(this.id)');
     albertStory.innerHTML = 'Albert Einstein';
+    document.body.appendChild(albertStory);
     
     var aliceStory = document.createElement('div');
     albertStory.setAttribute('id', 'alice');
@@ -54,6 +59,7 @@ function welcomeUser()
     albertStory.setAttribute('onmouseover', 'ChangeColor(this.id)');
     albertStory.setAttribute('onmouseleave', 'changeBack(this.id)');
     albertStory.innerHTML = 'Alice';
+    document.body.appendChild(aliceStory);
     
     var fenrirStory = document.createElement('div');
     albertStory.setAttribute('id', 'fenrir');
@@ -62,6 +68,8 @@ function welcomeUser()
     albertStory.setAttribute('onmouseover', 'ChangeColor(this.id)');
     albertStory.setAttribute('onmouseleave', 'changeBack(this.id)');
     albertStory.innerHTML = 'Fenrir';
+    document.body.appendChild(fenrirStory);
+    
 }
 // End Username prompt menu
 
